@@ -6,7 +6,7 @@ const posts = [
     date: "2023-07-08",
     views: "조회수 412",
     category: "#Team",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    image: "public/lovable-uploads/42187a99-0c6a-4176-bc95-5fcd322f7c2e.png"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const posts = [
     date: "2023-07-07",
     views: "조회수 325",
     category: "#Event",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    image: "public/lovable-uploads/a5617fce-275d-4023-8959-6717e811b2a6.png"
   },
   {
     id: 3,
@@ -22,24 +22,23 @@ const posts = [
     date: "2023-07-06",
     views: "조회수 287",
     category: "#Store",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    image: "public/lovable-uploads/f60c43bc-b922-4e70-ad35-6d56fb469d65.png"
   },
-  // 중복된 포스트 추가
   {
     id: 4,
     title: "NOLL 눈에 대한 모든 것.",
     date: "2023-07-08",
-    views: "조회수 412",
+    views: "조회수 412", 
     category: "#Team",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    image: "public/lovable-uploads/23c3c768-b79c-41e6-9809-c48b755baf4c.png"
   },
   {
     id: 5,
     title: "오늘의 공지사항 몇 그루트리가 있고 워크숍 운영정책",
-    date: "2023-07-07",
+    date: "2023-07-07", 
     views: "조회수 325",
-    category: "#Event",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    category: "#Event", 
+    image: "public/lovable-uploads/0e43a734-02ed-47a6-9dca-cea684e053f0.png"
   },
   {
     id: 6,
@@ -47,7 +46,7 @@ const posts = [
     date: "2023-07-06",
     views: "조회수 287",
     category: "#Store",
-    image: "public/lovable-uploads/3c87ef56-5801-4900-8214-c87df1838fbe.png",
+    image: "public/lovable-uploads/373d6254-162e-4da2-a5ef-e87c36cd99d7.png"
   }
 ];
 
