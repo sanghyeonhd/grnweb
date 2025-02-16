@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import { Google, Facebook } from "lucide-react";
+import { Facebook, Mail } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -27,7 +27,7 @@ const Login = () => {
               className="w-full border-gray-300 space-x-2"
               onClick={() => console.log("Google login")}
             >
-              <Google className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
               <span>Google로 시작하기</span>
             </Button>
             <Button 
