@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const posts = [
   {
     id: 1,
@@ -56,8 +58,9 @@ const JournalGrid = () => {
       <h2 className="text-lg font-medium text-left mb-8 border-b pb-4">JOURNAL</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
         {posts.map((post) => (
-          <article
+          <Link
             key={post.id}
+            to={`/journal/${post.id}`}
             className="group cursor-pointer"
           >
             <div className="aspect-[4/3] overflow-hidden mb-4">
@@ -79,7 +82,7 @@ const JournalGrid = () => {
                 {post.title}
               </h3>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
