@@ -13,9 +13,13 @@ const Navigation = () => {
             <Link to="/awards" className="nav-link text-xs tracking-widest">AWARDS</Link>
             <Link to="/store" className="nav-link text-xs tracking-widest">STORE</Link>
           </div>
-          <button className="p-2 hover:bg-granhand-warmGray/10 rounded-full transition-colors">
-            <Search className="w-4 h-4" />
-          </button>
+          <div className="flex items-center space-x-6">
+            <Link to="/login" className="text-xs tracking-widest hover:text-gray-600">로그인</Link>
+            <Link to="/signup" className="text-xs tracking-widest hover:text-gray-600">회원가입</Link>
+            <button className="p-2 hover:bg-granhand-warmGray/10 rounded-full transition-colors">
+              <Search className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </nav>
