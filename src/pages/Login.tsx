@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
+import { Google, Facebook } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,6 @@ const Login = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: 로그인 로직 구현
     console.log("Login attempt:", { email, password });
   };
 
@@ -20,10 +20,36 @@ const Login = () => {
       <Navigation />
       <main className="container mx-auto px-6 pt-32">
         <div className="max-w-md mx-auto">
-          <h1 className="text-2xl font-medium text-center mb-8">로그인</h1>
+          <h1 className="text-3xl font-serif text-center mb-12">Login</h1>
+          <div className="space-y-6 mb-8">
+            <Button 
+              variant="outline" 
+              className="w-full border-gray-300 space-x-2"
+              onClick={() => console.log("Google login")}
+            >
+              <Google className="w-5 h-5" />
+              <span>Google로 시작하기</span>
+            </Button>
+            <Button 
+              variant="outline" 
+              className="w-full border-gray-300 space-x-2"
+              onClick={() => console.log("Facebook login")}
+            >
+              <Facebook className="w-5 h-5" />
+              <span>Facebook으로 시작하기</span>
+            </Button>
+          </div>
+          <div className="relative mb-8">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-4 bg-white text-gray-500">또는</span>
+            </div>
+          </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm">이메일</label>
+              <label htmlFor="email" className="text-sm font-medium">아이디(이메일)</label>
               <Input
                 id="email"
                 type="email"
@@ -31,11 +57,11 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full"
-                placeholder="이메일을 입력해주세요"
+                placeholder="예) granhand@granhand.com"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="password" className="text-sm">비밀번호</label>
+              <label htmlFor="password" className="text-sm font-medium">비밀번호</label>
               <Input
                 id="password"
                 type="password"
@@ -46,20 +72,25 @@ const Login = () => {
                 placeholder="비밀번호를 입력해주세요"
               />
             </div>
-            <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800">
+            <div className="flex items-center justify-between text-sm">
+              <div className="space-x-4">
+                <Link to="/find-id" className="text-gray-600 hover:text-gray-900">아이디 찾기</Link>
+                <Link to="/reset-password" className="text-gray-600 hover:text-gray-900">비밀번호 찾기</Link>
+              </div>
+              <Link to="/signup" className="text-gray-600 hover:text-gray-900">회원가입</Link>
+            </div>
+            <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 h-12 text-base">
               로그인
             </Button>
           </form>
-          <div className="mt-6 text-center space-y-4">
-            <Link to="/forgot-password" className="text-sm text-gray-600 hover:text-gray-800">
-              비밀번호를 잊으셨나요?
-            </Link>
-            <div className="text-sm">
-              아직 회원이 아니신가요?{" "}
-              <Link to="/signup" className="text-black hover:underline">
-                회원가입
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600">
+              비회원 주문조회는{" "}
+              <Link to="/order-lookup" className="text-black font-medium hover:underline">
+                여기서
               </Link>
-            </div>
+              {" "}가능합니다.
+            </p>
           </div>
         </div>
       </main>

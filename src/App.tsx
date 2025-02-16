@@ -9,6 +9,7 @@ import Journal from "./pages/Journal";
 import JournalDetail from "./pages/JournalDetail";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import FindId from "./pages/FindId";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/journal/:id" element={<JournalDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/find-id" element={<FindId />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
